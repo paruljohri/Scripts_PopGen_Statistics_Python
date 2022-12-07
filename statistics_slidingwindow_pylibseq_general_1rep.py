@@ -25,15 +25,6 @@ folder = args.folder[0]
 filename = args.filename[0]
 
 
-def get_S(f_ms):
-	for line in f_ms:
-		line1 = line.strip('\n')
-		if "segsites" in line1:
-			S = line1.split()[1]
-	f_ms.seek(0)
-	return S
-
-
 result = open(folder + "/" + filename.split(".")[0] + "_" + str(args.winSize[0]) +	".stats", 'w+')
 result.write("simID" + '\t' + "posn" + '\t' + "S" + '\t' + "thetapi" + '\t' + "thetaw" + '\t' + "thetah" + '\t' + "hprime" + '\t' + "tajimasd" +  '\t' + "numSing" + '\t' + "hapdiv" + '\t' + "rsq" + '\t' + "D" + '\t' + "Dprime" + '\t' + "div" + '\n')
 
@@ -86,7 +77,7 @@ for i in range(len(w)):
 	wi = w[i]
 	#print (wi)
 	pswi = libsequence.PolySIM(wi)
-	result.write("sim" + str(numsim) + '\t' + str(win_name) + '\t' + S + '\t' + str(pswi.thetapi()) + '\t' + str(pswi.thetaw()) + '\t' + str(pswi.thetah()) + '\t' + str(pswi.hprime()) + '\t' + str(pswi.tajimasd()) + '\t' + str(pswi.numexternalmutations()) + '\t' + str(pswi.hapdiv()) + '\t')
+	result.write("sim" + str(numsim) + '\t' + str(win_name) + '\t' + str(pswi.numpoly()) + '\t' + str(pswi.thetapi()) + '\t' + str(pswi.thetaw()) + '\t' + str(pswi.thetah()) + '\t' + str(pswi.hprime()) + '\t' + str(pswi.tajimasd()) + '\t' + str(pswi.numexternalmutations()) + '\t' + str(pswi.hapdiv()) + '\t')
 	#read data to calculate LD based stats:
 			
 	if len(wi.pos()) >= 5: #These are pairwise stats. If only 1 site exists, it'll show an error.
