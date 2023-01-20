@@ -1,6 +1,6 @@
 #Basic stats, sliding window, SLIm ms output
 #adding divergence to this
-#python statistics_slidingwindow_pylibseq_general.py -winSize 200 -stepSize 200 -filename output1.ms -regionLen 2341 -folder /path/to/folder/with/input/file
+#python statistics_slidingwindow_pylibseq_general_1rep.py -winSize 200 -stepSize 200 -filename output1.ms -regionLen 2341 -folder /path/to/folder/with/input/file
 #
 from __future__ import print_function
 import libsequence
