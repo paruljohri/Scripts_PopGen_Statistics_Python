@@ -4,7 +4,7 @@
 #This program finds every *.ms file in the input_folder and calculates stats for all the files. 
 #A single output file is created in output_folder with the name output_prefix + "_" + window_size + ".stats".
 #How to run:
-#python statistics_slidingwindow_pylibseq_general_reps_v2.py -winSize 500 -stepSize 500 -regionLen 10000 -input_folder /path/to/folder/with/ms/files -output_folder /path/to/folder/with/results -output_prefix name_of_result_files
+#python statistics_slidingwindow_pylibseq_general_reps_v2.py -fileExt ".ms" -winSize 500 -stepSize 500 -regionLen 10000 -input_folder /path/to/folder/with/ms/files -output_folder /path/to/folder/with/results -output_prefix name_of_result_files
 
 from __future__ import print_function
 import libsequence
