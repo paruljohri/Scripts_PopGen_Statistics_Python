@@ -30,7 +30,6 @@ result.write("simID" + '\t' + "posn" + '\t' + "S" + '\t' + "thetapi" + '\t' + "t
 
 #go through the ms file and divergence file if it exists:
 f_ms = open(folder + "/" + filename, 'r')
-S = get_S(f_ms)
 l_Pos = [] #list of positions of SNPs
 l_Genos = [] #list of alleles
 d_tmp = {}
